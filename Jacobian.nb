@@ -1075,7 +1075,100 @@ $CellContext`EValues = Eigenvalues[
    3.632077126942049*^9}, 3.632077206104741*^9, 3.63207728982756*^9, {
    3.632077323771221*^9, 3.632077377816497*^9}, 3.6320774337429943`*^9, 
    3.6320809384158278`*^9, 3.632081090418951*^9, 3.6320818545892267`*^9, 
-   3.632081911032393*^9}]
+   3.632081911032393*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ArrayPlot", "::", "mat"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Argument \[NoBreak]\\!\\(PJMM\\)\[NoBreak] at position \
+\[NoBreak]\\!\\(1\\)\[NoBreak] is not a list of lists. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/ArrayPlot\\\", ButtonNote -> \\\
+\"ArrayPlot::mat\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.632161869831709*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Transpose", "::", "nmtx"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The first two levels of \
+\[NoBreak]\\!\\({\\(\\(Re[\\(\\(Eigenvalues[PJMM]\\)\\)]\\)\\), \
+\\(\\(Im[\\(\\(Eigenvalues[PJMM]\\)\\)]\\)\\)}\\)\[NoBreak] cannot be \
+transposed. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Transpose/nmtx\\\", ButtonNote -> \
+\\\"Transpose::nmtx\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.632161869854814*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[PJMM]\\)\\)]\
+\\)\\), \\(\\(Im[\\(\\(Eigenvalues[PJMM]\\)\\)]\\)\\)}\\)\\)]\\)\[NoBreak] is \
+not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
+\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.632161869944542*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[PJMM]\\)\\)]\
+\\)\\), \\(\\(Im[\\(\\(Eigenvalues[PJMM]\\)\\)]\\)\\)}\\)\\)]\\)\[NoBreak] is \
+not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
+\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.632161870008297*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\(Transpose[\\(\\({\\(\\(Re[\\(\\(Eigenvalues[PJMM]\\)\\)]\
+\\)\\), \\(\\(Im[\\(\\(Eigenvalues[PJMM]\\)\\)]\\)\\)}\\)\\)]\\)\[NoBreak] is \
+not a list of numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \\\"ListPlot::lpn\\\"]\
+\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.632161870069233*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(ListPlot \
+:: lpn\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.632161870086141*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ArrayPlot", "::", "mat"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Argument \[NoBreak]\\!\\(PJMM\\)\[NoBreak] at position \
+\[NoBreak]\\!\\(1\\)\[NoBreak] is not a list of lists. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/ArrayPlot\\\", ButtonNote -> \\\
+\"ArrayPlot::mat\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.632161870163335*^9}]
 }, Open  ]],
 
 Cell["Across dietary evenness", "Text",
@@ -1688,7 +1781,7 @@ Cell[BoxData[
 }, Open  ]]
 },
 WindowSize->{1293, 1395},
-WindowMargins->{{Automatic, 16}, {Automatic, 0}},
+WindowMargins->{{Automatic, 355}, {Automatic, 0}},
 PrivateNotebookOptions->{"FileOutlineCache"->False},
 FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September 9, \
 2014)",
