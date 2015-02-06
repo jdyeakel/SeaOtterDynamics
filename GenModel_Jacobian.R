@@ -17,6 +17,9 @@ dfdc_r <- c(0,1)
 
 
 
+sourceCpp("src/getEigenvalues.cpp")
+
+
 
 
 
