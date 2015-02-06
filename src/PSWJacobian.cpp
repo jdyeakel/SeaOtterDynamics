@@ -23,16 +23,40 @@ double PSWJacobian(
      
      
      //Build Jacobian
-     res_diag =
-     res_offdiag =
+     NumericVector res_diag(N)
+     NumericVector res_offdiag(N)
      
-     c_diag =
-     c_offdiag =
-     
+     //diagonal entries
+     for (int i=0; i<N; i++) {
+       res_diag(i) =
+       
+     }
+     c_diag = 
      p_diag =
-     p_offdiag =
+     
+     
+
+     
+     //Off diagonal entries
+     res_offdiag(i) =
+     c_offdiag =
+     p_offdiag = 
+     for (int i=0; i<(N+2); i++) {
+       for (int j=0; j<(N+2); j++) {
+         if (i<j) {
+           
+         }
+         if (j<i) {
+           
+         }
+       }
+     }
+     
+
+     
      
      NumericMatrix Jac(N+2,N+2)
+     
      
      
      
