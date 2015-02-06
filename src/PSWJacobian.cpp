@@ -25,7 +25,8 @@ double PSWJacobian(
      NumericVector br(N);
      double bc
      
-     //Elasticities
+     
+     
      NumericVector dsdr(N);
      NumericVector dmrdr(N);
      NumericMatrix dfdr(N,N);
@@ -71,11 +72,55 @@ double PSWJacobian(
        float r = (float)rand() / (float)RAND_MAX;
        dmdr(i) = dmdr_r(0,i) + r * (dmdr_r(1,i) - dmdr_r(0,i));
      }
-     //dgdr
+     
+     //Elasticity substitutions
+     // dfi/dri = chi_i*lambda_i(lambda_T + g_T - 1)
+     // dfi/drj = chi_j*lambda_j
+     // dfdc = dgdc
+     // dgdr = chi_i*lambda_i*g_T
+     
+     //NEED: chi(i), lambda(i), lambda_T, g_T,
+     
+     
+     //chi
      for (int i=0; i<N; i++) {
        float r = (float)rand() / (float)RAND_MAX;
-       dgdr(i) = dgdr_r(0,i) + r * (dmgr_r(1,i) - dgdr_r(0,i));
+       chi(i) = chi_r(0,i) + r * (chi_r(1,i) - chi_r(0,i));
      }
+     
+     //lambda
+     or (int i=0; i<N; i++) {
+       float r = (float)rand() / (float)RAND_MAX;
+       lambda(i) = lambda_r(0,i) + r * (lambda_r(1,i) - lambda_r(0,i));
+     }
+     
+     //lambda_T
+     float r = (float)rand() / (float)RAND_MAX;
+     lambdaT = lambdaT_r(0) + r * (lambdaT_r(1) - lambdaT_r(0));
+     
+     //dgdt
+     float r = (float)rand() / (float)RAND_MAX;
+     dgdc = dgdc_r(0) + r * (dgdc_r(1) - dgdc_r(0));
+     
+     //gT
+     float r = (float)rand() / (float)RAND_MAX;
+     gT = gT_r(0) + r * (gT_r(1) - gT_r(0));
+     
+     
+     
+     
+     //Introduce substitutions
+     for (int i=0; i<N; i++) {
+       dfdc(i) = dgdc;
+       dgdr(i) = chi(i)*lambda(i)*gT;
+       
+       for (int j=0; j<N; j++) {
+         //f function
+       }
+       
+     }
+     
+     
      
      //Build Jacobian
      NumericMatrix jac(N,N);
