@@ -9,7 +9,7 @@ J <- matrix(data = 0, N+2,N+2)
 
 
 #Scale parameters
-ar <- rep(1,N)
+ar_r <- rep(1,N)
 
 #define elasticity value (if constant) or min/max (if range)
 dfdi_r <- t(matrix(c(rep(0,N),rep(2,N)),N,2))

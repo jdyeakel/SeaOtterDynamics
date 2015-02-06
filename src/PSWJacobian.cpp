@@ -18,29 +18,67 @@ double PSWJacobian(
    //Loop over possible food webs
    for (int r=0; r<rep; r++) {
      
-     //Choose values for elasticities based on previously assigned values
-     //or Min/Max ranges
-     
-     //Also, this is where we will substitute in elasticity relationships!
-     
+     //Scale parameters
      NumericVector ar(N);
-     NumericVector dsdr(N);
+     double ac
+     double ap
      NumericVector br(N);
+     double bc
+     
+     //Elasticities
+     NumericVector dsdr(N);
      NumericVector dmrdr(N);
      NumericMatrix dfdr(N,N);
-     
-     double ac
-     double dgdc
-     double bc
-     double dmcdc
-     double dhdc
-     double dhdp
      NumericVector dgdr(N);
      NumericVector dfdc(N);
+     double dgdc;
+     double dmcdc;
+     double dhdc;
+     double dhdp;
+     
+     //Substitute in values and derived relationships
+     //Randomly drawn values between min and max
+     
+     //ar
+     for (int i=0; i<N; i++) {
+       float r = (float)rand() / (float)RAND_MAX;
+       ar(i) = ar_r(0,i) + r * (ar_r(1,i) - ar_r(0,i));
+     }
+     //ac
+     float r = (float)rand() / (float)RAND_MAX;
+     ac = ac_r(0) + r * (ac_r(1) - ac_r(0));
+     //ap
+     float r = (float)rand() / (float)RAND_MAX;
+     ap = ap_r(0) + r * (ap_r(1) - ap_r(0));
+     
+     //br
+     for (int i=0; i<N; i++) {
+       float r = (float)rand() / (float)RAND_MAX;
+       br(i) = br_r(0,i) + r * (br_r(1,i) - br_r(0,i));
+     }
+     //bc
+     float r = (float)rand() / (float)RAND_MAX;
+     bc = bc_r(0) + r * (bc_r(1) - bc_r(0));
+     
+     
+     //dsdr
+     for (int i=0; i<N; i++) {
+       float r = (float)rand() / (float)RAND_MAX;
+       dsdr(i) = dsdr_r(0,i) + r * (dsdr_r(1,i) - dsdr_r(0,i));
+     }
+     //dmdr
+     for (int i=0; i<N; i++) {
+       float r = (float)rand() / (float)RAND_MAX;
+       dmdr(i) = dmdr_r(0,i) + r * (dmdr_r(1,i) - dmdr_r(0,i));
+     }
+     //dgdr
+     for (int i=0; i<N; i++) {
+       float r = (float)rand() / (float)RAND_MAX;
+       dgdr(i) = dgdr_r(0,i) + r * (dmgr_r(1,i) - dgdr_r(0,i));
+     }
      
      //Build Jacobian
-     NumericVector res_diag(N);
-     NumericVector res_offdiag(N);
+     NumericMatrix jac(N,N);
      
      //diagonal entries
      for (int i=0; i<N; i++) {
